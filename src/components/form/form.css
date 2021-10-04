@@ -1,0 +1,10 @@
+.form__spacing {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.form-container__title {
+    font-family: 'Yaldevi', sans-serif;
+    text-align: center;
+}

@@ -1,0 +1,55 @@
+.header-container {
+    font-size: 1.1em;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 9rem;
+}
+
+.header-container__logo {
+    min-width: 0.8em;
+    max-width: 2.2em;
+    margin-left: 1rem;
+    color: rgb(34, 30, 30);
+}
+
+@media only screen and (max-width: 650px) {
+    .header-container__logo {
+        display: none;
+    }
+    .header-container__titleText {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .header-container__titleText {
+        font-size: 1.65rem;
+    }
+}
+
+.header-container__title {
+    position: absolute;
+    z-index: 1;
+    margin-left: 51%;
+    transform: translateX(-50%);
+    padding-top: 10px;
+}
+
+.custom-shape-divider-top-1632416888 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1632416888 svg {
+    position: relative;
+    display: block;
+    width: calc(275% + 1.3px);
+    height: 185px;
+}
+
+.custom-shape-divider-top-1632416888 .shape-fill {
+    fill: #A3F19A;
+}
