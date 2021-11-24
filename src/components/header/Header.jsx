@@ -5,11 +5,11 @@ function Header() {
 
     return(
         <header>
-            <h1>Nutricionista</h1>
+            <h1>Nutritionists</h1>
             <ul>
-                <li>Cadastrar</li>
-                <li>Pacientes</li>
-                <li>Consultas</li>
+                <li>Register</li>
+                <li>Patients</li>
+                <li>Appointments</li>
             </ul>
         </header>
     );

@@ -3,8 +3,9 @@ import {Button, TextField} from '@material-ui/core';
 import { HalfContainer } from "./formStyle.js";
 import { PatientsContext } from '../../providers/PatientsProvider';
 import { TitleH2 } from '../titles/TitleH2.js';
+import './materialUI.css';
 
-const Form = () => {
+const Form = (props) => {
 
     const [nome, setNome] = useState("");
     const [sobrenome, setSobrenome] = useState("");
@@ -15,7 +16,7 @@ const Form = () => {
 
     return (
         <HalfContainer>
-            <TitleH2>Registrar Novo Paciente</TitleH2>
+            <TitleH2>Register New Patient</TitleH2>
             <form onSubmit={(event) => {
                 event.preventDefault();
                 setPacientes([...pacientes, {nome: nome, sobrenome: sobrenome, peso: peso, altura: altura}]);
@@ -26,7 +27,8 @@ const Form = () => {
                         setNome(event.target.value);
                     })} 
                     label="Name" 
-                    variant="outlined" 
+                    theme={props.theme}
+                    color="success"
                     fullWidth
                     required 
                 />
@@ -40,7 +42,7 @@ const Form = () => {
                     margin="normal"
                     color="success"
                     fullWidth 
-                    required 
+                    required
                 />
                 <div className="form__spacing">
                     <TextField

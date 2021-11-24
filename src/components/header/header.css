@@ -3,8 +3,10 @@ header {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    color: #EDF4ED;
-    height: 125px;
+    color: #038C3E;
+    height: 100px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #038c3e36;
 }
 
 ul {
@@ -14,5 +16,14 @@ ul {
 li {
     display: inline;
     margin: 0px 0.5em 0px 0.5em;
-    color: #EDF4ED;
+    color: #038C3E;
 }
+
+@media (max-width: 700px) {
+    h1{
+        font-size: 1.25em;
+    }
+    li {
+        margin: 0px 0.25em 0px 0.25em;
+    }
+};

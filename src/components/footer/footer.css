@@ -1,0 +1,17 @@
+.mainFooter {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    height: 40px;
+    background-color: #F2F2F2;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.mainFooter__span1 {
+    margin-left: 20px;
+}
+
+.mainFooter__span2 {
+    margin-right: 20px;
+}
