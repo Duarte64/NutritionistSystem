@@ -1,7 +1,9 @@
-import { Container, Table, TableBody, TableCell, TableHead, TableRow, Typography} from '@material-ui/core';
+import { Table, TableBody, TableCell, TableHead, TableRow} from '@material-ui/core';
 import React, {useContext, createContext} from 'react';
 import {PatientsContext} from '../../providers/PatientsProvider';
 import { PacientRow } from './PatientRow';
+import { TitleH2 } from '../titles/TitleH2';
+
 import './list.css';
 
 export const patientContext = createContext();
@@ -11,8 +13,8 @@ function List() {
     const {pacientes} = useContext(PatientsContext);
 
     return(
-        <Container maxWidth="md" className="list__container">
-            <Typography variant="h4" component="h2" align="center">Pacients List</Typography>
+        <div className="texteS2">
+            <TitleH2>Patient</TitleH2>
             <Table>
                 <TableHead>
                     <TableRow>
@@ -56,7 +58,7 @@ function List() {
                 </TableFooter>
                 */}
             </Table>
-        </Container>
+        </div>
     )
 
 }

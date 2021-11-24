@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/header/Header';
-import Form from './components/form/Form';
+import FormPatient from './components/forms/FormPatient';
+import { FormAppointment } from './components/forms/FormAppointment';
 import List from './components/list/List';
 import React from 'react';
 import PatientsProvider from './providers/PatientsProvider';
@@ -12,7 +13,10 @@ function App() {
     <React.Fragment>
       <Header/>
       <PatientsProvider>
-        <Form/>
+        <div className='testando'>
+          <FormPatient/>
+          <FormAppointment/>
+        </div>
         <List/>
       </PatientsProvider>
       <Footer/>

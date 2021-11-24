@@ -8,3 +8,12 @@
     margin-top: 2.5rem;
     margin-bottom: 5rem;
 }
+
+.texteS2 {
+    margin: 6em auto;
+    padding: 2em;
+    width: 80%;
+    border-radius: 25px;
+    background-color: #46504F;
+    min-height: 250px;
+}

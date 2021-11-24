@@ -1,7 +1,8 @@
 import React, {useContext, useState} from 'react';
-import {Button, TextField, Typography, Container} from '@material-ui/core';
-import "./form.css";
+import {Button, TextField} from '@material-ui/core';
+import { HalfContainer } from "./formStyle.js";
 import { PatientsContext } from '../../providers/PatientsProvider';
+import { TitleH2 } from '../titles/TitleH2.js';
 
 const Form = () => {
 
@@ -13,8 +14,8 @@ const Form = () => {
     const {pacientes, setPacientes} = useContext(PatientsContext);
 
     return (
-        <Container maxWidth="sm">
-            <Typography variant="h4" component="h2" align="center">Register New Patient</Typography>
+        <HalfContainer>
+            <TitleH2>Registrar Novo Paciente</TitleH2>
             <form onSubmit={(event) => {
                 event.preventDefault();
                 setPacientes([...pacientes, {nome: nome, sobrenome: sobrenome, peso: peso, altura: altura}]);
@@ -26,8 +27,6 @@ const Form = () => {
                     })} 
                     label="Name" 
                     variant="outlined" 
-                    margin="normal" 
-                    color="success"
                     fullWidth
                     required 
                 />
@@ -44,36 +43,36 @@ const Form = () => {
                     required 
                 />
                 <div className="form__spacing">
-                <TextField
-                    value={altura} 
-                    onInput={((event) => {
-                        setAltura(event.target.value);
-                    })} 
-                    type="number" 
-                    label="Height" 
-                    variant="outlined" 
-                    margin="normal"
-                    color="success"
-                    size="medium" 
-                    required 
-                />
-                <TextField 
-                    value={peso}
-                    onInput={((event) => {
-                        setPeso(event.target.value);
-                    })} 
-                    type="number" 
-                    label="Weight" 
-                    variant="outlined" 
-                    margin="normal"
-                    color="success" 
-                    size = "medium"
-                    required 
-                />
+                    <TextField
+                        value={altura} 
+                        onInput={((event) => {
+                            setAltura(event.target.value);
+                        })} 
+                        type="number" 
+                        label="Height" 
+                        variant="outlined" 
+                        margin="normal"
+                        color="success"
+                        size="medium" 
+                        required 
+                    />
+                    <TextField 
+                        value={peso}
+                        onInput={((event) => {
+                            setPeso(event.target.value);
+                        })} 
+                        type="number" 
+                        label="Weight" 
+                        variant="outlined" 
+                        margin="normal"
+                        color="success" 
+                        size = "medium"
+                        required 
+                    />
                 </div>
                 <Button type="submit" variant="contained" size="large" color="success" fullWidth>Register</Button>
             </form>
-        </Container>
+        </HalfContainer>
     )
 }
 
