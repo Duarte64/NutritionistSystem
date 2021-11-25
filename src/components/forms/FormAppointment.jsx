@@ -3,7 +3,10 @@ import { HalfContainer } from './formStyle';
 import {Button} from '@material-ui/core';
 import { TitleH2 } from '../titles/TitleH2';
 import { TextField } from '@material-ui/core';
+import './materialUI.css';
+
 export function FormAppointment() {
+
 
     return (
         <HalfContainer>

@@ -9,14 +9,35 @@ header {
     border-bottom: 1px solid #038c3e36;
 }
 
+h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.7em;
+}
+
 ul {
     list-style: none;
 }
 
 li {
-    display: inline;
+    display: inline-block;
     margin: 0px 0.5em 0px 0.5em;
     color: #038C3E;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.35em;
+}
+
+li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #038C3E;
+    transition: width .3s;
+}
+
+li:hover::after {
+    width: 100%;
+    transition: width .3s;
 }
 
 @media (max-width: 700px) {

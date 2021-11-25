@@ -10,7 +10,7 @@ export const BackGroundElement2 = styled.div`
     z-index: -1;
     margin-top: 250px;
     right: 0px;
-    @media (max-width: 1300px) {
+    @media (max-width: 1400px) {
         margin-top: 450px;
         width: 250px;
         height: 250px;

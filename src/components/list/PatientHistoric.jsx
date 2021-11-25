@@ -1,6 +1,5 @@
 import React from 'react';
 import {TableRow, TableCell, Typography, TableBody, Table} from '@material-ui/core';
-import {DynamicChart} from './DynamicChart';
 import './list.css';
   
 
@@ -54,9 +53,6 @@ export const PatientHistoric = () => {
                         </TableRow>
                     </TableBody>
                 </Table>
-            </div>
-            <div className='historic__chart'>
-                <DynamicChart></DynamicChart>
             </div>
         </div>
     )
