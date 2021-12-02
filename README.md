@@ -1,6 +1,8 @@
 <h1 align=center>Nutritionist System 👩‍⚕️🍎</h1>
 <p>My first React WebApp, learning more about function components, hooks and how a Single Page Application works and can be more interactire with the user.</p>
 
+<img src="assets/Banner.png">
+
 <img src="https://img.shields.io/badge/license-MIT-green"> <img src="https://img.shields.io/github/stars/Duarte64/NutritionistSystem"> <img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FDuarte64%2FNutritionistSystem">
 
 
@@ -73,6 +75,9 @@ The following tools were used in the construction of the project:
 
 - JavaScript
 - React
+   - Material UI
+   - Styled Components
+   - React Router
 - HTML5
 - CSS3
 
