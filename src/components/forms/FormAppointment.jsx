@@ -38,7 +38,22 @@ export function FormAppointment() {
                     }
                     label="Patient Not Registered Yet"
                 />
-                {/*<LocalizationProvider dateAdapter={AdapterDateFns}>...</LocalizationProvider>*/}
+                <TextField
+                    label="Date" 
+                    variant="outlined" 
+                    margin="normal"
+                    color="success"
+                    fullWidth 
+                    required
+                />
+                <TextField
+                    label="Time" 
+                    variant="outlined" 
+                    margin="normal"
+                    color="success"
+                    fullWidth 
+                    required
+                />
                 <Button type="submit" variant="contained" size="large" color="success" fullWidth>Register</Button>
             </form>
         </HalfContainer>
