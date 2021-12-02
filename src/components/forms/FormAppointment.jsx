@@ -1,13 +1,20 @@
-import React from 'react'
+import React, {useContext, useState} from 'react'
 import { HalfContainer } from './formStyle';
 import {Button, TextField, Autocomplete, Checkbox} from '@material-ui/core';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import {PatientsContext} from '../../providers/PatientsProvider';
 import { TitleH2 } from '../titles/TitleH2';
 import './materialUI.css';
-import AdapterDateFns from '@material-ui/lab/AdapterDateFns';
-import LocalizationProvider from '@material-ui/lab/LocalizationProvider';
 
 export function FormAppointment() {
+
+    const {pacientes} = useContext(PatientsContext);
+
+    const [notRegistered, setRegistered] = useState(false);
+
+    function handleToogleRegistered() {
+        setRegistered(notRegistered ? false : true);
+    }
 
     return (
         <HalfContainer>
@@ -16,30 +23,23 @@ export function FormAppointment() {
                 <Autocomplete
                     disablePortal
                     id="combo-box-demo"
-                    options={['a','b','c','d','e','c','d']}
+                    options={pacientes.map((paciente)=> {
+                        return `${paciente.nome} ${paciente.sobrenome}`;
+                    })}
                     renderInput={(params) => <TextField {...params} label="Patient" />}
+                    disabled={notRegistered}
                 />
                 <FormControlLabel 
                     control={
                         <Checkbox 
-                            defaultChecked 
                             size="medium" 
-                            color="success"
+                            onClick={handleToogleRegistered}
                         />
                     }
                     label="Patient Not Registered Yet"
                 />
-                <LocalizationProvider dateAdapter={AdapterDateFns}>...</LocalizationProvider>
-                <TextField
-                    type="number" 
-                    label="Weight" 
-                    variant="outlined" 
-                    margin="normal"
-                    color="success" 
-                    size = "medium"
-                    required 
-                />
-            <Button type="submit" variant="contained" size="large" color="success" fullWidth>Register</Button>
+                {/*<LocalizationProvider dateAdapter={AdapterDateFns}>...</LocalizationProvider>*/}
+                <Button type="submit" variant="contained" size="large" color="success" fullWidth>Register</Button>
             </form>
         </HalfContainer>
     );
